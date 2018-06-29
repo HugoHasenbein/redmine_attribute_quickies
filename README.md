@@ -54,6 +54,7 @@ or
 
 * Go to Projects -> Settings -> Attribute-Quickies
 * Click 'Create new Attribute Quicky'
+![PNG that represents create new Attribute-Quicky dialogue](/doc/Create-Attribute-Quicky.png)
 * Begin with a **name**, which is displayed in the issue context menue (right click menue) which should be short, concise and describes what it does
 * Provide a **brief description**, which is shown in the attribute quickies list in the Attribute-Quickies tab in the project settings menue
 * Optionally **Copy** all last attribute changes from an issue of this project, f.i.
