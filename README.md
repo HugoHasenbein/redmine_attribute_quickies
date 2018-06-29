@@ -1,7 +1,7 @@
 # redmine_attribute_quickies
 Plugin for Redmine. With only **one click** set arbitrary combinations of issue attributes, custom fields and time entries, add comments to journals and add attachments
 
-### Use case
+### Use case(s)
 
 Manager wants to grant an application-for-leave to staff member. Manager clicks on preconfigured Attribute-Quicky in issue context menu and on just **one click** 
   - sets status to "granted", 
@@ -18,8 +18,11 @@ Support staff receives a phone call and provides support. After providing suppor
 or
   
 Jon Doe wants to return the issue to the last author and clicks a preconfigured Attribute-Quicky in issue context menu
-  
 
+or 
+
+[…] 
+  
 ### Install
 
 1. go to plugins folder
@@ -30,7 +33,19 @@ Jon Doe wants to return the issue to the last author and clicks a preconfigured 
 
 `bundle exec rake redmine:plugins:migrate RAILS_ENV=production NAME=redmine_attribute_quickies`
 
-3. restart server f.i. `sudo /etc/init.s/apache2 restart`
+3. restart server f.i.  `sudo /etc/init.s/apache2 restart`
+
+### Uninstall
+
+1. go to redmine root folder
+
+`bundle exec rake redmine:plugins:migrate RAILS_ENV=production NAME=redmine_attribute_quickies VERSION=0`
+
+2. go to plugins folder
+
+`rm -r redmine_attributes_quickies`
+
+3. restart server f.i.  `sudo /etc/init.s/apache2 restart`
 
 ### Use
 
@@ -69,3 +84,9 @@ In case the current issue matches the previous attributes of the template issue,
 Now you can right click an issue or on many issues at a time in the issue index view "View all issues" or "Custom query" and choose the Attribute-Quicky, which is displayed on top of the context menu. Click! All configured changes are applied to the issue. Ready!
 
 Attribute-Quickies honor work-flow permissions and permissions per role, i.e. "View (use) Attribute-Quickies" and "Manage (admin) Attribute-Quickies"
+
+### Change-Log
+
+* **1.0.1** initial commit
+* **1.0.1** Running on Redmine 3.4.6
+* **1.0.0** running on Redmine 3.3.3
