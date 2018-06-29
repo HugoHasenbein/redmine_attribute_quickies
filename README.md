@@ -96,6 +96,7 @@ You cann add as many Attribute-Quickies as you like. use only a few and keep the
 
 ### Change-Log
 
+* **1.0.2** minor fixes
 * **1.0.1** initial commit
 * **1.0.1** Running on Redmine 3.4.6
 * **1.0.0** running on Redmine 3.3.3
