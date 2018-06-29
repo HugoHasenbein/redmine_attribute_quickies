@@ -35,7 +35,7 @@ Jon Doe wants to return the issue to the last author and clicks a preconfigured 
 ### Use
 
 * Go to Projects -> Settings -> Modules and add Attribute-Quickies to project
-* Make sure you have the right permission to "Manage Attribute-Quickies" in the roles and permission settings in the Administration menu
+* Make sure you have the right permission to "Manage Attribute-Quickies" in the roles and permission settings in the Redmine Administration menu
 
 * Go to Projects -> Settings -> Attribute-Quickies
 * Click 'Create new Attribute Quicky'
