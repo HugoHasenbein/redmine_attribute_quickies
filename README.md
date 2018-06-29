@@ -8,10 +8,14 @@ Manager wants to grant an application-for-leave to staff member. Manager clicks 
   - sets "assigned to" the last author (the requesting staff member), 
   - leaves comment in issue: "have a nice vacation!",
   - adds an image of a beach scene 
+  
+or
 
 Support staff receives a phone call and provides support. After providing support on the phone support staff member clicks on preconfigured Attribute-Quicky in issue context menu and on just one click 
   - sets time log to 1/4 hour for technical support
   - leaves comment in issue "technical support for software installation"
+  
+or
   
 Jon Doe wants to return the issue to the last author and clicks a preconfigured Attribute-Quicky in issue context menu
   
