@@ -1,7 +1,7 @@
 # redmine_attribute_quickies
 Plugin for Redmine. With only one click set arbitrary combinations of issue attributes, custom fields and time entries, add comments to journals and add attachments
 
-## Install
+### Install
 
 1. go to plugins folder
 
@@ -11,4 +11,9 @@ Plugin for Redmine. With only one click set arbitrary combinations of issue attr
 
 `bundle exec rake redmine:plugins:migrate RAILS_ENV=production NAME=redmine_attribute_quickies`
 
-3. restart server f.i. /etc/init.s/apache2 restart
+3. restart server f.i. `sudo /etc/init.s/apache2 restart`
+
+### Use
+
+* In Redmine go to Projects -> Settings -> Attribute-Quickies
+* Click 'Create new Attribute Quicky'
