@@ -1,0 +1,43 @@
+<%- if Setting['plugin_redmine_attribute_quickies']['attribute_quickies_active'] %>
+  <%- attribute_quickies_for_context_menu( @issues ).each do |aq_link| %>
+
+	<%- if aq_link[:all_trackers_match] && aq_link[:all_issues_relate_to_aq_project] %>
+	  <%- if aq_link[:all_issues_qualify] %>
+		<li>
+		  <%= context_menu_link aq_link[:aq]['name'], 
+				bulk_update_issues_path(  :ids => @issue_ids, 
+										  :issue => merge_bulk_params(aq_link[:aq]),
+										  :back_url => @back
+									   ),
+				:method => :post,
+				:class => "attribute_quicky" 
+		  %>
+		</li>
+	  <%- elsif !aq_link[:aq].strict_match %>	
+		<li class="folder">
+		  <%= context_menu_link aq_link[:aq]['name'], 
+				bulk_update_issues_path(  :ids => @issue_ids, 
+										  :issue => merge_bulk_params(aq_link[:aq]),
+										  :back_url => @back
+									   ),
+				:method => :post,
+				:class => "attribute_quicky" 
+		  %>
+		  <ul>
+			<li><strong><u><%= l(:label_would_not_match) %></u></strong></li>
+			<%- aq_link[:details_match_array].each do |detail_arr| %>
+			  <li><span class='icon <%= detail_arr[0] ? 'icon-ok' : 'icon-not-ok' %>'><%= "#{detail_arr[1]}".html_safe %></span></li>
+			<%- end %>
+		  </ul>
+		</li>
+	  
+	  <%- else %>
+		<%= link_to aq_link[:aq]['name'], "#", :class => "attribute_quicky disabled" %>
+	  <%- end %>
+		
+	<%- else %>
+	   <%= link_to aq_link[:aq]['name'], "#", :class => "attribute_quicky disabled" %>
+	<%- end %>
+
+  <%- end %>
+<%- end %>

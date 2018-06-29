@@ -1,0 +1,5 @@
+<% if @notes %>
+  <fieldset class="preview"><legend><%= l(:field_notes) %></legend>
+    <%= textilizable @notes, :attachments => @attachments, :object => @issue %>
+  </fieldset>
+<% end %>

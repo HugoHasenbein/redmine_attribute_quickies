@@ -1,0 +1,82 @@
+# encoding: utf-8
+#
+# Redmine plugin for quick attribute setting of redmine issues
+#
+# Copyright © 2018 Stephan Wenzel <stephan.wenzel@drwpatent.de>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+# English strings go here for Rails i18n
+en:
+
+# Plugin Name
+  label_redmine_attribute_quickies: "Attribute-Quickies"
+  
+# Index
+  label_attribute_quicky_id: "ID"
+  
+# Plugin settings
+  label_attribute_quickies_settings: "Settings"
+  label_attribute_quickies_status: "Active"
+  text_attribute_quickies_status_help: "To fade out attribute quickies in the issue context menue, the plugin can be deactivated here. The plugin redmine attribute quickies can still be configured in the project settings, but will not be shown in the context menue."
+
+# Settings in projects tab
+  label_attribute_quicky: "Attribute-Quicky"
+  label_attribute_quicky_plural: "Attribute-Quickies"
+  label_no_attribute_quickies_defined: "No Attribut-Quickies to show"
+  
+  label_attribute_quicky_new: "Create new Attribute-Quicky"
+  label_attribute_quicky_edit: "Edit Attribut-Quicky %{id}"
+  label_attribute_quickies_edit: "Edit Attribut-Quickies"
+  
+  attribute_quickies_notice_successful_create: "New Attribute-Quickie successfully created."
+  attribute_quickies_notice_erroneus_create: "New Attribute-Quickie could not be created."
+  attribute_quickies_notice_use_same_project: "Template issue must exist in the same project."
+  attribute_quickies_notice_successful_update: "Attribute-Quickie %{id} successfully updated."
+  attribute_quickies_notice_erroneus_update: "Attribute-Quickie %{id} could not be updated."
+  attribute_quickies_notice_delete_error: "Attribute-Quickie %{id} could not be deleted."
+  attribute_quickies_notice_not_present: "Attribute-Quicky %{id} could not be found."
+  
+# Edit Attribute Quickies
+  text_copy_changed_attributes_from: "Copy last attribute changes from issue."
+  error_message_issue_not_available: "Issue with supplied ID not existent or not visible."
+  field_strict_match: "Only strict match"
+
+  label_amended_description: "Changed description"
+  label_attribute_quicky_naming: "Name in context menue"
+  label_attribute_quicky_name: "Name"
+  attribute_quickies_notice_description: "Short description"
+  
+  label_attribute_quickies_add_notes: "Comment"
+  field_add_notes: "Add comment?"
+  
+  field_issue_description_action: "action"
+  field_issue_template: "Issue-template"
+  label_prepend: "prepend"
+  label_append: "append"
+  label_replace: "replace"
+  
+  label_attribute_quickies_assign_to_last_author: "Answer-function"
+  field_assign_to_last_author: "Assign to last author"
+  
+  label_attachments: "Attachments"
+
+# Permission settings in Administration->Roles and permissions
+  project_module_redmine_attribute_quickies: "Attribute-Quickies"
+  permission_view_attribute_quickies: "View Attribut-Quickies"  
+  permission_edit_attribute_quickies: "Manage Attribut-Quickies"
+  
+# Context menue
+  label_would_not_match: "After update the following would not be true:"

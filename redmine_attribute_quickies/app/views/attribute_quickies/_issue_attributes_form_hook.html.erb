@@ -1,0 +1,3 @@
+<%= fields_for :attribute_quicky do |f| %>
+<%= call_hook(:view_issues_edit_notes_bottom, { :issue => @issue, :notes => @notes, :form => f }) %>
+<%- end #form_for %>

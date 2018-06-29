@@ -1,0 +1,43 @@
+<div class="contextual">
+  <%= link_to l(:label_settings),
+                { controller: 'settings', action: 'plugin', id: 'redmine_attribute_quickies' },
+                :class => 'attribute_quickies icon plugin' %>
+</div>
+<p>
+<%= link_to l(:label_attribute_quicky_new),
+			  new_attribute_quicky_path(@project, :tab => params[:tab]), 
+			  :class => 'icon icon-add' %>
+</p>
+<% if AttributeQuicky.where(:project_id => @project.id).count == 0 %>
+  <%= render partial: "attribute_quickies/nodata" %>
+<% else %>
+  <h3 class="attribute_quicky"><%= l(:label_attribute_quickies_edit) %></h3>
+  <div class="attribute_quickies_box">
+	<table class="list attribute_quickies">
+	  <thead><tr>
+	  <th><%=l(:label_attribute_quicky_id)%></th>
+	  <th><%=l(:field_name)%></th>
+	  <th><%=l(:field_description)%></th>
+	  <th></th>
+	  </tr></thead>
+	  <tbody>
+	  <% AttributeQuicky.where(:project_id => @project.id).order(:position).to_a.each do |attribute_quicky| %>
+		<tr class="<%= cycle("odd", "even") %>">
+		<td class="category"><%= link_to attribute_quicky.id, edit_attribute_quicky_path(@project, attribute_quicky) %></td>
+		<td class="category"><%= link_to attribute_quicky.name, edit_attribute_quicky_path(@project, attribute_quicky) %></td>
+		<td class="count"><%= link_to attribute_quicky.description, edit_attribute_quicky_path(@project, attribute_quicky) %></td>
+		<td class="buttons">
+		  <%= reorder_handle(attribute_quicky, :url => attribute_quicky_path(@project, attribute_quicky) ) %>
+		  <%= delete_link attribute_quicky_path(@project, attribute_quicky, :tab => params[:tab]) %>
+		</td>
+		</tr>
+	  <% end %>
+	  </tbody>
+	</table>
+  </div>
+<%- end %>
+<% html_title(l(:label_redmine_attribute_quickies)) -%>
+
+<%= javascript_tag do %>
+  $(function() { $("table.attribute_quickies tbody").positionedItems(); });
+<% end %>

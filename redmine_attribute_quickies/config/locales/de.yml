@@ -1,0 +1,82 @@
+# encoding: utf-8
+#
+# Redmine plugin for quick attribute setting of redmine issues
+#
+# Copyright © 2018 Stephan Wenzel <stephan.wenzel@drwpatent.de>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+# German strings go here for Rails i18n
+de:
+
+# Plugin Name
+  label_redmine_attribute_quickies: "Attribut-Quickies"
+  
+# Index
+  label_attribute_quicky_id: "ID"
+  
+# Plugin settings
+  label_attribute_quickies_settings: "Einstellungen"
+  label_attribute_quickies_status: "Aktiv"
+  text_attribute_quickies_status_help: "Hier kann die gesamte Funktion der Attribut-Quickies in Redmine deaktiviert werden. Das Plugin Attribut-Quickies läuft zwar noch, ist aber in Redmine nicht mehr zu sehen."
+
+# Settings in projects tab
+  label_attribute_quicky: "Attribut-Quicky"
+  label_attribute_quicky_plural: "Attribut-Quickies"
+  label_no_attribute_quickies_defined: "Keine Attribut-Quickies vorhanden"
+  
+  label_attribute_quicky_new: "Neues Attribut-Quicky erstellen"
+  label_attribute_quicky_edit: "Attribut-Quicky %{id} bearbeiten"
+  label_attribute_quickies_edit: "Attribut-Quickies bearbeiten"
+  
+  attribute_quickies_notice_successful_create: "Neues Attribut-Quickie erfolgreich angelegt."
+  attribute_quickies_notice_erroneus_create: "Neues Attribut-Quickie konnte nicht angelegt werden."
+  attribute_quickies_notice_use_same_project: "Vorlagen-Ticket muss aus dem selben Projekt stammen."
+  attribute_quickies_notice_successful_update: "Attribut-Quickie %{id} erfolgreich aktualisiert."
+  attribute_quickies_notice_erroneus_update: "Attribut-Quickie %{id} konnte nicht aktualisiert werden."
+  attribute_quickies_notice_delete_error: "Attribut-Quickie %{id} konnte nicht gelöscht werden."
+  attribute_quickies_notice_not_present: "Attribute-Quicky %{id} konnte nicht gefunden werden."
+  
+# Edit Attribute Quickies
+  text_copy_changed_attributes_from: "Kopiere die letzten Attribut-Änderungen von Ticket"
+  error_message_issue_not_available: "Ticket mit eingegebener ID nicht vorhanden oder nicht einsehbar."
+  field_strict_match: "Nur exakt passend"
+
+  label_amended_description: "Geänderte Beschreibung"
+  label_attribute_quicky_naming: "Name in Kontext-Menue"
+  label_attribute_quicky_name: "Name"
+  attribute_quickies_notice_description: "Kurze Beschreibung"
+  
+  label_attribute_quickies_add_notes: "Kommentar"
+  field_add_notes: "Kommentar anfügen?"
+  
+  field_issue_description_action: "Aktion"
+  field_issue_template: "Ticket-Vorlage"
+  label_prepend: "voranstellen"
+  label_append: "anfügen"
+  label_replace: "ersetzen"
+  
+  label_attribute_quickies_assign_to_last_author: "Antwort-Funktion"
+  field_assign_to_last_author: "Letzem Bearbeiter zuweisen"
+  
+  label_attachments: "Attachments"
+
+# Permission settings in Administration->Roles and permissions
+  project_module_redmine_attribute_quickies: "Attribut-Quickies"
+  permission_view_attribute_quickies: "Attribut-Quickies einsehen"  
+  permission_edit_attribute_quickies: "Attribut-Quickies verwalten"
+  
+# Context menue
+  label_would_not_match: "Nach Update würde nicht stimmen:"

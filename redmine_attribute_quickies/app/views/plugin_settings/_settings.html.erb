@@ -1,0 +1,13 @@
+<fieldset class="box tabular"><legend><%= l(:label_attribute_quickies_settings) %> </legend>
+
+  <p>  
+    <label><%= l(:label_attribute_quickies_status) %></label>
+    <%= check_box_tag 'settings[attribute_quickies_active]', '1', settings['attribute_quickies_active'] == '1' %>
+     <a class='icon icon-help' href='#' title='<%= "#{l(:label_help)}" %>' onclick='$("#help_attribute_quickies_status").toggle(); return false;'><%= l(:label_help) %></a>
+	 <br>
+	 <span id="help_attribute_quickies_status" class="info" style="display: none;">
+	   <em class="info"><%= l(:text_attribute_quickies_status_help) %></em>
+	 </span>
+  </p>
+
+</fiedset>

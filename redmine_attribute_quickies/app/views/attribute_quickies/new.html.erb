@@ -1,0 +1,7 @@
+<h2><%= link_to l(:label_redmine_attribute_quickies), attribute_quickies_path %> » <%= l(:label_attribute_quicky_new) %></h2>
+<%= form_for @attribute_quicky, {:url => attribute_quickies_path(@project),
+								 :method => :post,
+							     :html => {:id => "attribute_quicky-form" }
+								 } do |f| %>
+<%= render :partial => 'form', :locals => {:f => f }  %>
+<%- end #form_for %>
