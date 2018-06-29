@@ -88,6 +88,8 @@ In case the current issue matches the previous attributes of the template issue,
 
 Now you can right click an issue or on many issues at a time in the issue index view "View all issues" or "Custom query" and choose the Attribute-Quicky, which is displayed on top of the context menu. Click! All configured changes are applied to the issue. Ready!
 
+![PNG that represents use Attribute-Quicky in issue index view](/doc/Use-Attribute-Quicky.png)
+
 Attribute-Quickies honor work-flow permissions and permissions per role, i.e. "View (use) Attribute-Quickies" and "Manage (admin) Attribute-Quickies"
 
 ### Change-Log
