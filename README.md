@@ -25,6 +25,7 @@ Plugin for Redmine. With only one click set arbitrary combinations of issue attr
   * priority
   * start date
   * due date
+  
 To copy last issue changes from an existing issue search the issue by subject or ID in the Issue-template field. Then press *Copy*
 * Optionally fill out **Log Time**
 * Optionally choose **Assign to last author**
