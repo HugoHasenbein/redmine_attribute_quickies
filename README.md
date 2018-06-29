@@ -26,7 +26,9 @@ Plugin for Redmine. With only one click set arbitrary combinations of issue attr
   * start date
   * due date
   
-To copy last issue changes from an existing issue search the issue by subject or ID in the Issue-template field. Then press *Copy*
+To copy last issue changes from an existing issue search the issue by subject or ID in the Issue-template field. Then press *Copy*. 
+If a description change is detected you are privided with a drop down list. It lets you choose if the description change should be prepended, appended or if the new description should replace the description of the issue, on which Attribute-Quicky is applied with one click in the issue context menue.
+
 * Optionally fill out **Log Time**
 * Optionally choose **Assign to last author**
 * Optionally choose **Add comment** and use all macros and issue comment function with full markdown / textile support
