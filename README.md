@@ -54,7 +54,11 @@ or
 
 * Go to Projects -> Settings -> Attribute-Quickies
 * Click 'Create new Attribute Quicky'
+
+gets you to this dialogue:
+
 ![PNG that represents create new Attribute-Quicky dialogue](/doc/Create-Attribute-Quicky.png)
+
 * Begin with a **name**, which is displayed in the issue context menue (right click menue) which should be short, concise and describes what it does
 * Provide a **brief description**, which is shown in the attribute quickies list in the Attribute-Quickies tab in the project settings menue
 * Optionally **Copy** all last attribute changes from an issue of this project, f.i.
@@ -75,7 +79,7 @@ In case the current issue matches the previous attributes of the template issue,
 * Optionally fill out **Log Time**
 * Optionally choose **Assign to last author**
 * Optionally choose **Add comment** and use all macros and issue comment function with full markdown / textile support
-* Optionally **Add attachment**
+* Optionally **Add attachment** - above I added a picture of a friendly dolphin, which I think is a nice guy granting vacation requests
 
 * Choose **Role** for which this Attribute-Quicky should be active, all or only certain roles
 * Choose **Tracker** for which this Attribute-Quicky should be active, all or selected ones
