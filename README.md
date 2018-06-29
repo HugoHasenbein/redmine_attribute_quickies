@@ -92,6 +92,8 @@ Now you can right click an issue or on many issues at a time in the issue index 
 
 Attribute-Quickies honor work-flow permissions and permissions per role, i.e. "View (use) Attribute-Quickies" and "Manage (admin) Attribute-Quickies"
 
+You cann add as many Attribute-Quickies as you like. use only a few and keep them simple. Have fun!
+
 ### Change-Log
 
 * **1.0.1** initial commit
