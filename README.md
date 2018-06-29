@@ -3,7 +3,7 @@ Plugin for Redmine. With only **one click** set arbitrary combinations of issue 
 
 ### Use case
 
-Manager wants to grant an application-for-leave to staff member. Manager clicks on preconfigured Attribute-Quicky in issue context menu and on just one click sets 
+Manager wants to grant an application-for-leave to staff member. Manager clicks on preconfigured Attribute-Quicky in issue context menu and on just **one click** 
   - sets status to "granted", 
   - sets "assigned to" the last author (the requesting staff member), 
   - leaves comment in issue: "have a nice vacation!",
