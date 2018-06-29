@@ -7,17 +7,17 @@
 	     <label><%= l(:label_amended_description) %></label>
 		 <%= f.select 'issue_description_action', options_for_select([[l(:label_append), 1], [l(:label_prepend), 2], [l(:label_replace), 3]], @attribute_quicky.issue_description_action ) %>
 	   <%- else %>
-		 <%= f.hidden_field 'issue_description_action', :value => @attribute_quicky.issue_description_action %>
+		 <%= f.hidden_field 'issue_description_action', :value => 0 %>
 	   <%- end %>
 	 </div>
 	 <%= details_to_strings(@journal_details).join("<br />\n").html_safe %>
    <%- else %>
 	 <div class="flash warning"><%= l(:label_no_data) %></div>
-	 <%= f.hidden_field 'issue_description_action', :value => @attribute_quicky.issue_description_action %>
+	 <%= f.hidden_field 'issue_description_action', :value => 0 %>
    <%- end %>
    <%- else %>
 	 <div class="flash error"><%= l(:error_message_issue_not_available) %></div>
-	 <%= f.hidden_field 'issue_description_action', :value => @attribute_quicky.issue_description_action %>
+	 <%= f.hidden_field 'issue_description_action', :value => 0 %>
    <%- end %>
  </div>
  <%= hidden_field_tag 'issue_id', @issue.id if @issue.present? %>
