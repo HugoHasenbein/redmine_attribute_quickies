@@ -34,7 +34,10 @@ Jon Doe wants to return the issue to the last author and clicks a preconfigured 
 
 ### Use
 
-* In Redmine go to Projects -> Settings -> Attribute-Quickies
+* Go to Projects -> Settings -> Modules and add Atribute-Quickies to project
+* Make sure you have the right permission to "Manage Attribute-Quickies" in the roles and permission settings in the Administration menu
+
+* Go to Projects -> Settings -> Attribute-Quickies
 * Click 'Create new Attribute Quicky'
 * Begin with a **name**, which is displayed in the issue context menue (right click menue) which should be short, concise and describes what it does
 * Provide a **brief description**, which is shown in the attribute quickies list in the Attribute-Quickies tab in the project settings menue
@@ -46,7 +49,9 @@ Jon Doe wants to return the issue to the last author and clicks a preconfigured 
   * due date
   
 To copy last issue changes from an existing issue search the issue by subject or ID in the Issue-template field. Then press *Copy*. 
-If a description change is detected you are privided with a drop down list. It lets you choose if the description change should be prepended, appended or if the new description should replace the description of the issue, on which Attribute-Quicky is applied with one click in the issue context menue.
+If a description change is detected you are provided with a drop down list. It lets you choose if the description change should be prepended, appended or if the new description should replace the description of the issue, on which Attribute-Quicky is applied with one click in the issue context menue.
+
+Use the "**Only strict match**" option to only activate this Attribute-Quicky in the issue context menu, if the current issue's attributes match the prevoius attributes of the chosen template issue. Example: the template issue's attribute 'A' was changed from 'X' to 'Z'. Attribute Quicky stores "Change 'A' from 'X' to 'Z'. If the current issue you want to apply the Attribute-Quicky on, has an attribute 'A' with value 'Y', then either a notice is shown next to the Attribute-Quicky in the context menu that after update the change from'X' to 'Z' would not match or if "**Only strict match**" is chosen, the Attribute-Quicky will be deactiavted. In case the current issue natches, no notice is shown.
 
 * Optionally fill out **Log Time**
 * Optionally choose **Assign to last author**
@@ -56,4 +61,8 @@ If a description change is detected you are privided with a drop down list. It l
 * Choose **Role** for which this Attribute-Quicky should be active, all or only certain roles
 * Choose **Tracker** for which this Attribute-Quicky should be active, all or selected ones
 
-  
+**Save**
+
+Now you can right click an issue or many issues in the issue index view "View all issues" or "Custom query" and choose the Attribute-Quicky, which is displayed on top of the context menu. Click! All configured changes are applied to the issue. Ready!
+
+Attribute-Quickies honor work-flow permissions and permissions per role, i.e. "View (use) Attribute-Quickies" and "Manage (admin) Attribute-Qucikies"
