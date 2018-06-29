@@ -1,6 +1,21 @@
 # redmine_attribute_quickies
 Plugin for Redmine. With only one click set arbitrary combinations of issue attributes, custom fields and time entries, add comments to journals and add attachments
 
+### Use case
+
+Manager wants to grant an application-for-leave to staff member. Manager clicks on preconfigured Attribute-Quicky in issue context menu and on just one click sets 
+  - sets status to "granted", 
+  - sets "assigned to" the last author (the requesting staff member), 
+  - leaves comment in issue: "have a nice vacation!",
+  - adds an image of a beach scene 
+
+Support staff receives a phone call and provides support. After providing support on the phone support staff member clicks on preconfigured Attribute-Quicky in issue context menu and on just one click 
+  - sets time log to 1/4 hour for technical support
+  - leaves comment in issue "technical support for software installation"
+  
+Jon Doe wants to return the issue to the last author and clicks a preconfigured Attribute-Quicky in issue context menu
+  
+
 ### Install
 
 1. go to plugins folder
@@ -33,5 +48,8 @@ If a description change is detected you are privided with a drop down list. It l
 * Optionally choose **Assign to last author**
 * Optionally choose **Add comment** and use all macros and issue comment function with full markdown / textile support
 * Optionally **Add attachment**
+
+* Choose **Role** for which this Attribute-Quicky should be active, all or only certain roles
+* Choose **Tracker** for which this Attribute-Quicky should be active, all or selected ones
 
   
