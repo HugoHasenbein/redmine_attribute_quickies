@@ -22,7 +22,7 @@ Redmine::Plugin.register :redmine_attribute_quickies do
   name 'Redmine Attribute Quickies'
   author 'Stephan Wenzel'
   description 'This is a plugin for Redmine bulk edit bulk attributes'
-  version '1.0.1'
+  version '1.0.2'
   url 'https://github.com/HugoHasenbein/redmine_attribute_quickies'
   author_url 'https://github.com/HugoHasenbein/redmine_attribute_quickies'
 
