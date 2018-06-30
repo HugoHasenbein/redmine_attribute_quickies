@@ -1,6 +1,8 @@
 # redmine_attribute_quickies
 Plugin for Redmine. With only **one click** set arbitrary preconfigurable set of combinations of issue attributes, custom fields and time entries, add comments to journals and add attachments like a **custom workflow**.
 
+![PNG that represents a quick overview](/doc/Overview.png)
+
 ### Use case(s)
 
 Manager wants to grant an application-for-leave to staff member. Manager clicks on preconfigured Attribute-Quicky in issue context menu and on just **one click** 
