@@ -71,7 +71,7 @@ gets you to this dialogue:
   * start date
   * due date
   
-**Important Notice:**: the only way to set/change attribute changers is to copy the attribute changes from an existing issue. After copying the existing issue may be deleted, closed or deleted.
+**Important Notice:**: the only way to set/change attribute changers is to copy the attribute changes from an existing issue. After copying the existing issue may be changed, closed or deleted.
 
 To copy last issue changes from an existing issue search the issue by subject or ID in the Issue-template field. Then press *Copy*. 
 If a description change is detected you are provided with a drop down list. It lets you choose if the description change should be prepended, appended or if the new description should replace the description of the issue, on which Attribute-Quicky is applied with one click in the issue context menue.
