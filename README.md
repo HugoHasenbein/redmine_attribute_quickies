@@ -18,6 +18,7 @@ Support staff receives a phone call and provides support. After providing suppor
 or
   
 Jon Doe wants to return the issue to the last author and clicks a preconfigured Attribute-Quicky in issue context menu
+  - set assigned to whoever was last author, like a **respond** - btton
 
 or 
 
