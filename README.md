@@ -87,13 +87,19 @@ In case the current issue matches the previous attributes of the template issue,
 
 **Save!**
 
-Now you can right click an issue or on many issues at a time in the issue index view "View all issues" or "Custom query" and choose the Attribute-Quicky, which is displayed on top of the context menu. Click! All configured changes are applied to the issue. Ready!
+Now you can right click an issue or on many issues at a time in the issue index view "View all issues" or "Custom query" and choose the Attribute-Quicky, which is displayed on top of the context menu. 
+
+**Click!** 
+
+All configured changes are applied to the selected issue(s). Ready!
 
 ![PNG that represents use Attribute-Quicky in issue index view](/doc/Use-Attribute-Quicky.png)
 
 Attribute-Quickies honor work-flow permissions and permissions per role, i.e. "View (use) Attribute-Quickies" and "Manage (admin) Attribute-Quickies"
 
-You cann add as many Attribute-Quickies as you like. use only a few and keep them simple. Have fun!
+You cann add as many Attribute-Quickies as you like. Good practice: Use only a few and keep them simple. 
+
+**Have fun!**
 
 ### Change-Log
 
