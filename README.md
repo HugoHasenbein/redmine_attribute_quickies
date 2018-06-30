@@ -71,16 +71,20 @@ gets you to this dialogue:
   * start date
   * due date
   
+**Important Notice:**: the only way to set/change attributes is to copy the attribute changes from an existing issue.
+
 To copy last issue changes from an existing issue search the issue by subject or ID in the Issue-template field. Then press *Copy*. 
 If a description change is detected you are provided with a drop down list. It lets you choose if the description change should be prepended, appended or if the new description should replace the description of the issue, on which Attribute-Quicky is applied with one click in the issue context menue.
 
-Use the "**Only strict match**" option to only activate this Attribute-Quicky in the issue context menu, if the current issue's attributes under the issue context menu match the prevoius attributes of the chosen template issue.
+Use the "**Only strict match**" option to only activate this Attribute-Quicky in the issue context menu, if the current issue's attributes under the issue context menu match the previous attributes of the chosen template issue.
 
 *Example:* the template issue's, you choose here, attribute 'A' was changed from 'X' to 'Z'. Attribute-Quicky stores "Change 'A' from 'X' to 'Z'. 
 
 If the current issue under the issue context menu you want to apply the Attribute-Quicky to, has an attribute 'A' with value 'Y', then either a notice is shown next to the Attribute-Quicky in the issue context menu that after an update the change from 'X' to 'Z' would not match or, because the current issue would be changed vom 'Y' to 'Z' instead of from 'X' to 'Z'. 
 If "**Only strict match**" is chosen, the Attribute-Quicky will be deactiavted. 
+
 In case the current issue under the issue context menu matches the previous attributes of the template issue, then no notice is shown.
+
 *Use case:* never grant vacation on a closed request. You are free to choose your own rules.
 
 * Optionally fill out **Log Time**
