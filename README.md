@@ -74,15 +74,19 @@ gets you to this dialogue:
 To copy last issue changes from an existing issue search the issue by subject or ID in the Issue-template field. Then press *Copy*. 
 If a description change is detected you are provided with a drop down list. It lets you choose if the description change should be prepended, appended or if the new description should replace the description of the issue, on which Attribute-Quicky is applied with one click in the issue context menue.
 
-Use the "**Only strict match**" option to only activate this Attribute-Quicky in the issue context menu, if the current issue's attributes match the prevoius attributes of the chosen template issue. 
-*Example:* the template issue's attribute 'A' was changed from 'X' to 'Z'. Attribute-Quicky stores "Change 'A' from 'X' to 'Z'. 
-If the current issue you want to apply the Attribute-Quicky on, has an attribute 'A' with value 'Y', then either a notice is shown next to the Attribute-Quicky in the context menu that after update the change from 'X' to 'Z' would not match or, if "**Only strict match**" is chosen, the Attribute-Quicky will be deactiavted. 
-In case the current issue matches the previous attributes of the template issue, then no notice is shown.
+Use the "**Only strict match**" option to only activate this Attribute-Quicky in the issue context menu, if the current issue's attributes under the issue context menu match the prevoius attributes of the chosen template issue.
+
+*Example:* the template issue's, you choose here, attribute 'A' was changed from 'X' to 'Z'. Attribute-Quicky stores "Change 'A' from 'X' to 'Z'. 
+
+If the current issue under the issue context menu you want to apply the Attribute-Quicky to, has an attribute 'A' with value 'Y', then either a notice is shown next to the Attribute-Quicky in the issue context menu that after an update the change from 'X' to 'Z' would not match or, because the current issue would be changed vom 'Y' to 'Z' instead of from 'X' to 'Z'. 
+If "**Only strict match**" is chosen, the Attribute-Quicky will be deactiavted. 
+In case the current issue under the issue context menu matches the previous attributes of the template issue, then no notice is shown.
+*Use case:* never grant vacation on a closed request. You are free to choose your own rules.
 
 * Optionally fill out **Log Time**
 * Optionally choose **Assign to last author**
 * Optionally choose **Add comment** and use all macros and issue comment function with full markdown / textile support
-* Optionally **Add attachment** - above I added a picture of a friendly dolphin, which I think is a nice guy granting vacation requests
+* Optionally **Add attachment** - above I added a picture of a friendly dolphin, which I think is a nice guy for granting vacation requests
 
 * Choose **Role** for which this Attribute-Quicky should be active, all or only certain roles
 * Choose **Tracker** for which this Attribute-Quicky should be active, all or selected ones
