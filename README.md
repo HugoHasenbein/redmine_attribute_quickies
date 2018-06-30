@@ -64,7 +64,7 @@ gets you to this dialogue:
 
 * Begin with a **name**, which is displayed in the issue context menue (right click menue) which should be short, concise and describes what it does
 * Provide a **brief description**, which is shown in the attribute quickies list in the Attribute-Quickies tab in the project settings menue
-* __Optionally__ **Copy** all last attribute changes from an issue of this project, f.i.
+* Optionally **Copy** all last attribute changes from an issue of this project, f.i.
   * status
   * assign to
   * priority
