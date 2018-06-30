@@ -97,7 +97,7 @@ All configured changes are applied to the selected issue(s). Ready!
 
 Attribute-Quickies honor work-flow permissions and permissions per role, i.e. "View (use) Attribute-Quickies" and "Manage (admin) Attribute-Quickies"
 
-You cann add as many Attribute-Quickies as you like. Good practice: Use only a few and keep them simple. 
+You may add as many Attribute-Quickies as you like. *Good practice:* Use only a few and keep them simple. 
 
 **Have fun!**
 
