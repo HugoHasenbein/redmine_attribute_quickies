@@ -11,8 +11,8 @@ Manager wants to grant an application-for-leave to staff member. Manager clicks 
   
 or
 
-Support staff receives a phone call and provides support. After providing support on the phone support staff member clicks on preconfigured Attribute-Quicky in issue context menu and on just one click 
-  - sets time log to 1/4 hour for technical support
+Support staff receives a phone call and provides support. After providing support on the phone support staff member clicks on preconfigured Attribute-Quicky in issue context menu and on just **one click**
+  - sets time log to 1/4 hour for "technical support"
   - leaves comment in issue "technical support for software installation"
   
 or
