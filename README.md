@@ -111,6 +111,11 @@ You may add as many Attribute-Quickies as you like. *Good practice:* Use only a 
 
 **Have fun!**
 
+### Localisations
+
+* English
+* German
+
 ### Change-Log
 
 * **1.0.2** minor fixes
