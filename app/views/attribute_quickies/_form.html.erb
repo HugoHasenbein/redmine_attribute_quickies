@@ -1,122 +1,126 @@
 <%= labelled_fields_for :attribute_quicky, @attribute_quicky do |f| %>
 <%= error_messages_for 'attribute_quicky' %>
 <div class="splitcontent">  
-<div class="splitcontentleft">
-  <div class="box tabular">
-	<fieldset class="box" id="attribute_quicky_name"><legend><%= l(:label_attribute_quicky_naming) %></legend>
-	  <%= f.text_field :name, :size => 30, :id => "attribute_quicky_name", :required => true %>
-	</fieldset>
+  <div class="splitcontentleft">
 
-	<fieldset class="box" id="attribute_quicky_description"><legend><%= l(:attribute_quickies_notice_description) %></legend>
-	  <%= f.text_area :description, :rows => 2, :id => "attribute_quicky_description", :required => true %>
-	</fieldset>
+	  <fieldset class="box tabular" id="attribute_quicky_name"><legend><%= l(:label_attribute_quicky_naming) %></legend>
+		<p><%= f.text_field :name, :size => 30, :id => "attribute_quicky_name", :required => true %></p>
+	  </fieldset>
 
-    <fieldset class="box" id="attribute_quicky_template"><legend><%=l(:text_copy_changed_attributes_from)%></legend>
-    <p>
-	<%= f.text_field :issue_template_id, :size => 10, :id => "attribute_quicky_template_issue", :required => true %>
-	<%= f.hidden_field :project_id, :value => @project.id %>
-	<%= hidden_field_tag :tab, 'attribute_quickies' %>
-	<%= javascript_tag "observeAutocompleteField('attribute_quicky_template_issue', '#{auto_complete_issues_path(:project_id => @project, :scope => (Setting.cross_project_issue_relations? ? 'all' : nil))}')".html_safe %>
-	<%= link_to_function l(:button_copy), "attributeQuickiesForm('#{attribute_quickies_issue_attributes_path(@project)}', '#attribute_quicky-form')", :class => 'icon icon-copy' %>
-	</p>
-	<p>
-	<%= f.check_box :strict_match %>
-	</p>
-	<div class="attribute_quicky_list" id="attribute_quicky_attribute_list">
-      <%= render 'issue_attributes_form'%>
-	</div>
-	</fieldset>
-	<fieldset class="box"><legend><%= l(:button_log_time) %></legend>
-	  <%= labelled_fields_for :time_entry, @time_entry do |time_entry| %>
-		<div class="splitcontent">
-		  <div class="splitcontentleft">
-		    <p><%= time_entry.text_field :hours, :size => 6, :label => :label_spent_time %> <%= l(:field_hours) %></p>
-		  </div>
-		  <div class="splitcontentright">
-		    <p><%= time_entry.select :activity_id, activity_collection_for_select_options %></p>
-		  </div>
+	  <fieldset class="box tabular" id="attribute_quicky_description"><legend><%= l(:attribute_quickies_notice_description) %></legend>
+		<p><%= f.text_area :description, :rows => 2, :id => "attribute_quicky_description", :required => true %></p>
+	  </fieldset>
+
+	  <fieldset class="box tabular" id="attribute_quicky_template"><legend><%=l(:text_copy_changed_attributes_from)%></legend>
+		<p>
+		  <%= f.text_field :issue_template_id, :size => 10, :id => "attribute_quicky_template_issue", :required => true %>
+		  <%= f.hidden_field :project_id, :value => @project.id %>
+		  <%= hidden_field_tag :tab, 'attribute_quickies' %>
+		  <%= javascript_tag "observeAutocompleteField('attribute_quicky_template_issue', '#{auto_complete_issues_path(:project_id => @project, :scope => (Setting.cross_project_issue_relations? ? 'all' : nil))}')".html_safe %>
+		  <%= link_to_function l(:button_copy), "attributeQuickiesForm('#{attribute_quickies_issue_attributes_path(@project)}', '#attribute_quicky-form')", :class => 'icon icon-copy' %>
+		</p>
+		<p><%= f.check_box :strict_match %></p>
+		<div class="attribute_quicky_list" id="attribute_quicky_attribute_list">
+		  <%= render 'issue_attributes_form'%>
 		</div>
-		<p><%= time_entry.text_field :comments, :size => 60 %></p>
-		<% @time_entry.custom_field_values.each do |value| %>
-		  <p><%= custom_field_tag_with_label :time_entry, value %></p>
+	  </fieldset>
+	
+	  <fieldset class="box tabular"><legend><%= l(:button_log_time) %></legend>
+		<%= labelled_fields_for :time_entry, @time_entry do |time_entry| %>
+		  <div class="splitcontent">
+			<div class="splitcontentleft">
+			  <p><%= time_entry.text_field :hours, :size => 6, :label => :label_spent_time %> <%= l(:field_hours) %></p>
+			</div>
+			<div class="splitcontentright">
+			  <p><%= time_entry.select :activity_id, activity_collection_for_select_options %></p>
+			</div>
+		  </div>
+		  <p><%= time_entry.text_field :comments, :size => 60 %></p>
+		  <% @time_entry.custom_field_values.each do |value| %>
+			<p><%= custom_field_tag_with_label :time_entry, value %></p>
+		  <% end %>
 		<% end %>
-	  <% end %>
-    </fieldset>
+	  </fieldset>
 
-	<fieldset class="box" id="attribute_quicky_assign_to_last_author"><legend><%= l(:label_attribute_quickies_assign_to_last_author) %></legend>
-	  <%= f.check_box :assign_to_last_author %>
-	</fieldset>
+	  <fieldset class="box tabular" id="attribute_quicky_assign_to_last_author"><legend><%= l(:label_attribute_quickies_assign_to_last_author) %></legend>
+		<p><%= f.check_box :assign_to_last_author %></p>
+	  </fieldset>
 
-	<fieldset class="box" id="attribute_quicky_add_notes"><legend><%= l(:label_attribute_quickies_add_notes) %></legend>
-	  <%= f.check_box :add_notes, :onchange => "$('#form_attribute_quicky_notes').toggle(); return false;" %>
-	</fieldset>
+	  <fieldset class="box tabular" id="attribute_quicky_add_notes"><legend><%= l(:label_attribute_quickies_add_notes) %></legend>
+		<p><%= f.check_box :add_notes, :onchange => "$('#form_attribute_quicky_notes').toggle(); return false;" %></p>
+	  </fieldset>
+
   </div>
-</div>
-<div class="splitcontentright">
-  <div class="box tabular">
+  
+  <div class="splitcontentright">
 
-	<fieldset class="box" id="atribute_quicky_role_ids"><legend><%=l(:label_role_plural)%></legend>
-	<p>
-	  <label><%= l(:field_visible) %></label>
-	  <label class="block">
-		<%= radio_button_tag 'attribute_quicky[visibility]', 1, @attribute_quicky.visibility, :id => 'attribute_quicky_visible_on',
-			  :data => {:disables => '.attribute_quicky_role input'} %>
-		<%= l(:label_visibility_public) %>
-	  </label>
-	  <label>&nbsp;</label>
-	  <label class="block">
-		<%= radio_button_tag 'attribute_quicky[visibility]', 0, !@attribute_quicky.visibility, :id => 'attribute_quicky_visible_off',
-			  :data => {:enables => '.attribute_quicky_role input'} %>
-		<%= l(:label_visibility_roles) %>:
-	  </label>
-	  <% Role.givable.sorted.each do |role| %>
-	    <label>&nbsp;</label>
-		<label class="block attribute_quicky_role" style="padding-left:2em;">
-		  <%= check_box_tag 'attribute_quicky[role_ids][]', role.id, @attribute_quicky.roles.include?(role), :id => nil %>
-		  <%= role.name %>
+	  <fieldset class="box tabular" id="atribute_quicky_role_ids"><legend><%=l(:label_role_plural)%></legend>
+	  <p>
+		<label><%= l(:field_visible) %></label>
+		<label class="block">
+		  <%= radio_button_tag 'attribute_quicky[visibility]', 1, @attribute_quicky.visibility, :id => 'attribute_quicky_visible_on',
+				:data => {:disables => '.attribute_quicky_role input'} %>
+		  <%= l(:label_visibility_public) %>
 		</label>
-	  <% end %>
-	  <%= hidden_field_tag 'attribute_quicky[role_ids][]', '' %>
-	</p>
-	</fieldset>
+		<label>&nbsp;</label>
+		<label class="block">
+		  <%= radio_button_tag 'attribute_quicky[visibility]', 0, !@attribute_quicky.visibility, :id => 'attribute_quicky_visible_off',
+				:data => {:enables => '.attribute_quicky_role input'} %>
+		  <%= l(:label_visibility_roles) %>:
+		</label>
+		<% Role.givable.sorted.each do |role| %>
+		  <label>&nbsp;</label>
+		  <label class="block attribute_quicky_role" style="padding-left:2em;">
+			<%= check_box_tag 'attribute_quicky[role_ids][]', role.id, @attribute_quicky.roles.include?(role), :id => nil %>
+			<%= role.name %>
+		  </label>
+		<% end %>
+		<%= hidden_field_tag 'attribute_quicky[role_ids][]', '' %>
+	  </p>
+	  </fieldset>
 
-	<fieldset class="box" id="attribute_quicky_tracker_ids"><legend><%=l(:label_tracker_plural)%></legend>
-	<% Tracker.sorted.each do |tracker| %>
-	  <%= check_box_tag "attribute_quicky[tracker_ids][]",
-						tracker.id,
-						(@attribute_quicky.trackers.include? tracker),
-						:id => "attribute_quicky_tracker_ids_#{tracker.id}" %>
-	  <label class="no-css" for="attribute_quicky_tracker_ids_<%=tracker.id%>">
-		<%= tracker.name %>
-	  </label>
-	<% end %>
-	<%= hidden_field_tag "attribute_quicky[tracker_ids][]", '' %>
-	<p><%= check_all_links 'attribute_quicky_tracker_ids' %></p>
-	</fieldset>
+	  <fieldset class="box" id="attribute_quicky_tracker_ids"><legend><%=l(:label_tracker_plural)%></legend>
+		<p>
+		  <% Tracker.sorted.each do |tracker| %>
+			<%= check_box_tag "attribute_quicky[tracker_ids][]",
+							  tracker.id,
+							  (@attribute_quicky.trackers.include? tracker),
+							  :id => "attribute_quicky_tracker_ids_#{tracker.id}" %>
+			<label class="no-css" for="attribute_quicky_tracker_ids_<%=tracker.id%>">
+			  <%= tracker.name %>
+			</label>
+		  <% end %>
+		</p>
+		<%= hidden_field_tag "attribute_quicky[tracker_ids][]", '' %>
+		<p><%= check_all_links 'attribute_quicky_tracker_ids' %></p>
+	  </fieldset>
+	
+	  <% if @attribute_quicky.attachments.any? %>
+		<fieldset class="box tabular" id="attribute_quicky_attachments"><legend><%=l(:label_attachments)%></legend>
+			<p>&nbsp;<%= link_to_attachments( @attribute_quicky, :thumbnails => true ) %>&nbsp;<!-- important - this fixes the collapse problem --></p>
+		</fieldset>
+	  <% end %>
 	
   </div>
-  <% if @attribute_quicky.attachments.any? %>
-  <div class="box tabular">
-    <fieldset class="box" id="attribute_quicky_attachments"><legend><%=l(:label_attachments)%></legend>
-		&nbsp;<%= link_to_attachments( @attribute_quicky, :thumbnails => true ) %>&nbsp;<!-- important - this fixes the collapse problem -->
-	</fieldset>
-  </div>  
-  <% end %>
+  
 </div>
-</div>
-<div id="form_attribute_quicky_notes" class="box white" <%= @attribute_quicky.add_notes ? "" : "style='display: none;'".html_safe  %> >
-  <fieldset><legend><%= l(:field_notes) %></legend>
-  <%= f.text_area :notes, :cols => 60, :rows => 10, :class => 'wiki-edit', :no_label => true %>
-  <%= wikitoolbar_for 'attribute_quicky_notes' %>
 
-  <% if @issue.safe_attribute? 'private_notes' %>
-  <%= f.check_box :private_notes, :no_label => true %> <label for="attribute_quicky_private_notes"><%= l(:field_private_notes) %></label>
-  <% end %>
-  <span id="attribute_quicky_hook"><%= call_hook(:view_issues_edit_notes_bottom, { :issue => @issue, :notes => @notes, :form => f }) %></span>
+<div class="box filedroplistner" id="form_attribute_quicky_notes" <%= @attribute_quicky.add_notes ? "" : "style='display: none;'".html_safe  %> >
+  <fieldset><legend><%= l(:field_notes) %></legend>
+    <%= f.text_area :notes, :cols => 60, :rows => 10, :class => 'wiki-edit', :no_label => true %>
+    <%= wikitoolbar_for 'attribute_quicky_notes' %>
+
+    <% if @issue.safe_attribute? 'private_notes' %>
+     <%= f.check_box :private_notes, :no_label => true %> <label for="attribute_quicky_private_notes"><%= l(:field_private_notes) %></label>
+    <% end %>
+    
+    <span id="attribute_quicky_hook"><%= call_hook(:view_issues_edit_notes_bottom, { :issue => @issue, :notes => @notes, :form => f }) %></span>
   </fieldset>
+  
   <fieldset><legend><%= l(:label_attachment_plural) %></legend>
-  <p><%= render :partial => 'attachments/form', :locals => {:container => @issue} %></p>
+    <p><%= render :partial => 'attachments/form', :locals => {:container => @issue} %></p>
   </fieldset>
+  
 </div>
 
 <%= submit_tag l(:button_save) %>

@@ -17,6 +17,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+#
 
 Redmine::Plugin.register :redmine_attribute_quickies do
   name 'Redmine Attribute Quickies'
@@ -43,4 +44,4 @@ Redmine::Plugin.register :redmine_attribute_quickies do
 
 end
 
-require 'attribute_quickies'
+require 'redmine_attribute_quickies'

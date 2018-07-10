@@ -18,21 +18,17 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-RedmineApp::Application.routes.draw do
+Rails.configuration.to_prepare do
 
-  # resource quickies creation and administration
-  resources :projects do #project
-    member do #project_names
-      scope 'settings' do #only for settings
-        resources :attribute_quickies, :param => :attribute_quicky_id, :except => :show #all necessary routes
-      end
-    end
-  end
+  # patch helpers and controllers
+  require 'redmine_attribute_quickies/patches/projects_helper_patch'  
+  require 'redmine_attribute_quickies/patches/application_helper_patch'
 
-  # additional link for resource quickies creation and administration
-  match '/projects/:id/settings/attribute_quickies/preview/notes' => 'attribute_quickies#issue', :as => 'preview_attribute_quickies_notes', :via => [:put]
-
-  # link to retrieve last issue changes
-  match '/projects/:id/settings/attribute_quickies/issue/attributes' => 'attribute_quickies#issue_attributes', :as => 'attribute_quickies_issue_attributes', :via => [:put]
+  # code hook
+  require 'redmine_attribute_quickies/hooks/attribute_quickies_issues_bulk_edit_before_save'
   
+  # link hooks
+  require 'redmine_attribute_quickies/hooks/attribute_quickies_css'
+  require 'redmine_attribute_quickies/hooks/attribute_quickies_context_menu'
+
 end
