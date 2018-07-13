@@ -54,22 +54,19 @@
   
   <div class="splitcontentright">
 
-	  <fieldset class="box tabular" id="atribute_quicky_role_ids"><legend><%=l(:label_role_plural)%></legend>
+	  <fieldset class="box tabular" id="atribute_quicky_role_ids"><legend><%=l(:field_visible)%></legend>
 	  <p>
-		<label><%= l(:field_visible) %></label>
 		<label class="block">
 		  <%= radio_button_tag 'attribute_quicky[visibility]', 1, @attribute_quicky.visibility, :id => 'attribute_quicky_visible_on',
 				:data => {:disables => '.attribute_quicky_role input'} %>
 		  <%= l(:label_visibility_public) %>
 		</label>
-		<label>&nbsp;</label>
 		<label class="block">
 		  <%= radio_button_tag 'attribute_quicky[visibility]', 0, !@attribute_quicky.visibility, :id => 'attribute_quicky_visible_off',
 				:data => {:enables => '.attribute_quicky_role input'} %>
 		  <%= l(:label_visibility_roles) %>:
 		</label>
 		<% Role.givable.sorted.each do |role| %>
-		  <label>&nbsp;</label>
 		  <label class="block attribute_quicky_role" style="padding-left:2em;">
 			<%= check_box_tag 'attribute_quicky[role_ids][]', role.id, @attribute_quicky.roles.include?(role), :id => nil %>
 			<%= role.name %>
