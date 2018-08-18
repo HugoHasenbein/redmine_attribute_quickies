@@ -28,15 +28,15 @@ or
   
 ### Install
 
-1. go to plugins folder
-
-`git clone https://github.com/HugoHasenbein/redmine_attribute_quickies.git`
+1. download plugin and copy plugin folder redmine_attribute_quickies go to Redmine's plugins folder 
 
 2. go to redmine root folder
 
 `bundle exec rake redmine:plugins:migrate RAILS_ENV=production NAME=redmine_attribute_quickies`
 
-3. restart server f.i.  `sudo /etc/init.s/apache2 restart`
+3. restart server f.i.
+
+`sudo /etc/init.d/apache2 restart`
 
 ### Uninstall
 
@@ -44,11 +44,13 @@ or
 
 `bundle exec rake redmine:plugins:migrate RAILS_ENV=production NAME=redmine_attribute_quickies VERSION=0`
 
-2. go to plugins folder
+2. go to plugins folder, delete plugin folder redmine_attributes_quickies
 
 `rm -r redmine_attributes_quickies`
 
-3. restart server f.i.  `sudo /etc/init.s/apache2 restart`
+3. restart server f.i.
+
+`sudo /etc/init.d/apache2 restart`
 
 ### Use
 
